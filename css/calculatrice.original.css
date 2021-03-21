@@ -1,0 +1,341 @@
+/** RESET **/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+html{font-size:62.5%;}
+body {
+	line-height: 1;
+	font-size:16px;
+	font-size:1.6rem;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+ul{list-style:none;}
+.clear{clear:both;}
+/** FONTS **/
+@font-face {font-family: 'HelveticaRoundedLTStdBold';src: url('../fonts/helveticaroundedltstd-bd-webfont.eot');src:local('?'), url('../fonts/helveticaroundedltstd-bd-webfont.eot#iefix') format('embedded-opentype'),url('../fonts/helveticaroundedltstd-bd-webfont.woff') format('woff'),url('../fonts/helveticaroundedltstd-bd-webfont.ttf') format('truetype'),url('../images/helveticaroundedltstd-bd-webfont.svg#HelveticaRoundedLTStdBold') format('svg');font-weight: normal;font-style: normal;}
+.HelveticaBold{font-family: 'HelveticaRoundedLTStdBold';}
+
+
+/** CALCULATRICE **/
+body{background-color:#e6e2e3;font-family:Helvetica, Arial, sans-serif;}
+
+.radius{border-radius: 5px;}
+.radiust{border-radius: 5px 5px 0 0;}
+.radiusb{border-radius: 0  0 5px 5px;}
+.radiusg{border-radius: 5px 0 0 5px;}
+.radiusr{border-radius: 0 5px 5px 0;}
+.radiusbg{border-radius: 0 0 0 5px;}
+.radiusbd{border-radius: 0 0 5px 0;}
+
+/** FLOAT **/
+.floatl{float:left;}
+.floatr{float:right;}
+.floatn{float:none;}
+
+/** FORM **/
+.btn01{display:inline-block;border-radius:3px;line-height:25px;padding:0 10px;color:#fff;text-decoration:none;margin-left:20px;border: none;font-size: 1.6rem;cursor:pointer;}
+.input01{width:80px;line-height:24px;height:24px;font-size:14px;font-size:1.4rem;background-color:#fafdff;padding:0 10px;font-weight:bold;}
+
+/** GRID **/
+.grid1 > *{width:100%;}
+.grid2 > *{width:50%;}
+.grid3 > *{width:33.33%;}
+.grid4 > *{width:25%;}
+.grid5 > *{width:20%;}
+.grid6 > *{width:16.666%;}
+.grid7 > *{width:14.2857%;}
+.grid8 > *{width:12.5%;}
+
+/** Etape **/
+span.bullet{display:inline-block;width:30px;height:30px;border-radius:15px;text-align:center;line-height:30px;color:#fff;font-family:Arial, Verdana, Sans-Serif;font-size:20px;font-size:2rem;float:left;margin-right:5px;}
+
+/** GENERIQUE **/
+#calculatrice{position:relative;width:750px;margin:0 auto;}
+#top{background-color:#fff;overflow:hidden;padding:15px 10px 0;}
+#top h1{font-size:25px;font-size:2.3rem;padding-top: 5px;}
+#top h1 span{font-size:1.9rem;color:#000;}
+#logoPartenaire, 
+#logo1euro {
+  height: auto;
+  margin-bottom: 10px;
+  width: 100%;
+}
+#logoPartenaire {
+	float: right;
+	max-width: 235px;
+}
+#logo1euro {
+	float: left;
+	max-width: 148px;
+}
+	@media (max-width:600px) {
+		#top h1 {
+			clear: both;
+			padding: 15px 0;
+			text-align: center;
+			float: none;
+		}
+		#logo1euro,
+		#logoPartenaire {
+			width: 50%;
+		} 
+		#logo1euro {
+			margin-top: 10px;
+			width: 35%;
+		}
+		#logoPartenaire {
+			width: 65%;
+		}
+	}
+#top h1 span#nomPartenaire{font-size:2.3rem;}
+
+#tabCalc{position:relative;background-color:#fff;}
+#calcMenu{background-color:#fff;overflow:hidden;width:100%;}
+#calcMenu li{cursor:pointer;display:inline-block;float:left;text-align:center;line-height:60px;background-color:#f4f4f4;border-bottom: 1px solid #ccc;border-left: 1px solid #ccc;box-sizing: border-box;}
+#calcMenu li:first-child{border-left:none;}
+#calcMenu li a{font-family:'HelveticaRoundedLTStdBold';color:#6c6c6c;text-decoration:none;display:inline-block;line-height:normal;vertical-align:middle;}
+#calcMenu li:hover{background-color:#ccc;}
+#calcMenu li:hover a{color:#fff;}
+#calcMenu li.actif{background-color:#fff;border:none;}
+#calcMenu .radiusbd{border-right: 1px solid #ccc;}
+
+.valide{margin-top:20px;overflow: hidden;text-align: center;}
+
+.choixMontant{margin-bottom:15px;}
+
+.calcContent{padding:20px;overflow:hidden;}
+
+/* recapitulative table & steps */
+#recap,
+.steps {
+	box-sizing: border-box;
+	width: 50%;
+}
+#recap {
+	float: right;
+}
+#recap table tr:first-child td {
+	border-top: 1px solid #ddd;
+}
+#recap table td {
+	border-bottom: 1px solid #ddd;
+	border-collapse: collapse;
+	font-weight: 700;
+	padding: 8px;
+}
+#recap table td:first-child {
+	font-size: 13px;
+}
+#recap table td:last-child {
+	font-size: 15px;
+	text-align: right;
+	vertical-align: bottom;
+}
+#recap table td:last-child > span {
+	font-size: .85em;
+}
+.steps h2 {
+	font-size: 19px;
+	font-weight: 700;
+	line-height: 1.2em;
+	padding-bottom: 25px;
+}
+.steps li {
+	min-height: 30px;
+	padding: 0 0 10px 38px;
+	position: relative;
+}
+.steps li span.bullet {
+	border-radius: 50%;
+	left: 0;
+	position: absolute;
+	top: 0;
+}
+.steps li p {
+	font-size: 15px;
+	font-weight: 700;
+}
+@media (max-width:600px) {
+	#recap, 
+	#recap table, 
+	.steps {
+		clear: both;
+		float: none;
+		width: 100%;
+	}
+}
+
+/* Simulation */
+#step{position:relative;width:100%;}
+#step > li{overflow:hidden;}
+#step li span{font-weight:bold;}
+#step > li > p{display:inline-block;float:left;line-height:30px;margin:0 5px 15px 5px;}
+
+/* Options */
+#options{position:relative;width:100%;margin-top:20px;overflow:hidden;}
+#options li{cursor:pointer;display:inline-block;float:left;line-height:60px;height:60px;text-align:center;color:#6c6c6c;background-color:#f4f4f4;border:1px solid #ccc;border-left: none;box-sizing: border-box;}
+#options li:first-child{border-left: 1px solid #ccc;}
+#options li span{display:inline-block;vertical-align:middle;line-height:normal;}
+#options li:hover,#options li.actif{color:#fff;border-left:none;border-right:none;}
+#optionContent{position:relative;/*border:1px solid #ebebeb;border-top:none;overflow:hidden;*/padding:10px;margin-top:10px;}
+#optionContent h2{font-family:'HelveticaRoundedLTStdBold';font-size:20px;font-size:2rem;margin-bottom:5px;}
+#optionContent p{/*font-size:14px;font-size:1.4rem;*/color:#d00;font-size:12px;}
+
+/* Banniere */
+#banniere{text-align:center;margin-top:20px;}
+
+/* Mention */
+#mention{padding:20px 20px 10px;}
+#mention p.mention1 span{font-size:14px;font-size:1.4rem;padding-bottom: 10px;}
+#mention p.mention2{font-size:10px;font-size:1rem;padding-bottom: 10px;}
+
+/* Bénéficier + avantages */
+.etape{margin-top:20px;}
+.etape li{position:relative;display:block;clear:both;margin-top:10px;overflow: hidden;padding-left: 27px;}
+.etape li span.bullet{position:absolute;top: 15px;left: 0px;}
+.etape li p{overflow: hidden;border: 1px solid #ddd;padding: 5px;float: right;width:100%;}
+.etape li img, .etape li span{display:inline-block;float:left;}
+.etape li img{margin: 0 12px;}
+.etape li span.texte{padding:5px;width: 570px;font-size:1.4rem;}
+
+/** Couleur **/
+
+	/* Generique */
+	#calcMenu li.actif a{color:#2d85c4;}
+	#step li span.color{color:#2d85c4;}
+	span.bullet{background-color:#00335a;}
+	.steps li span.bullet {background-color: #E2052F;}
+	#recap table td:first-child,.steps h2 {color: #E2052F;}
+	.btn01{background-color:#E2052F;border-bottom:3px solid #FECC16;}
+	.input01{border:none;border-bottom:1px solid #E2052F;}
+	#options li:hover,#options li.actif{background-color:#fff;border-bottom:4px solid #000;}
+	#options li:hover span,#options li span, #options li.actif span{color:#000;}
+	#optionContent h2{color:#2d85c4;}
+	.etape span .color{color:#2d85c4;}
+	
+	/* Allopneus */
+	.allopneus #top h1{color:#E55820;}
+	.allopneus #top h1 span{color:#000;}
+		.allopneus #top h1 span#nomPartenaire strong{color:#E55820;}
+	.allopneus #calcMenu li.actif a{color:#E55820;}
+	.allopneus #step li span.color{color:#E55820;}
+	.allopneus span.bullet{background-color:#E55820;}
+	.allopneus .steps li span.bullet {background-color: #E55820;}
+	.allopneus #recap table td:first-child,.allopneus .steps h2 {color: #E55820;}
+	/*.allopneus .btn01{background-color:#E55820;border-bottom:3px solid #8E3311;}
+	.allopneus .input01{border:2px solid #E55820;}*/
+	.allopneus .btn01{background-color:#E55820;border-bottom:3px solid #ba3601;}
+	.allopneus .input01{border:none;border-bottom:1px solid #E55820;}
+	/* .allopneus #options li:hover, .allopneus #options li.actif{background-color:#E55820;border-bottom:4px solid #8E3311;} */
+	.allopneus #options li:hover, .allopneus #options li.actif{background-color:#fff;border-bottom:4px solid #8E3311;}
+	.allopneus #optionContent h2{color:#E55820;}
+	
+	/* Priceminister */
+	.priceminister #top h1{color:#EA921F;}
+	.priceminister #top h1 span{color:#000;}
+		.priceminister #top h1 span#nomPartenaire strong{color:#EA921F;}
+		.priceminister #top h1 span#nomPartenaire strong.color2{color:#0E1F88;}
+	.priceminister #calcMenu li.actif a{color:#0E1F88;}
+	.priceminister #step li span.color{color:#0E1F88;}
+	.priceminister span.bullet{background-color:#0E1F88;}
+	.priceminister .steps li span.bullet {background-color: #0E1F88;}
+	.priceminister #recap table td:first-child,.priceminister .steps h2 {color: #0E1F88;}
+	/*.priceminister .btn01{background-color:#0E1F88;border-bottom:3px solid #002340;}
+	.priceminister .input01{border:2px solid #0E1F88;}*/
+	.priceminister .btn01{background-color:#0E1F88;border-bottom:3px solid #001cca;}
+	.priceminister .input01{border:none;border-bottom:1px solid #0E1F88;}
+	/* .priceminister #options li:hover, .priceminister #options li.actif{background-color:#0E1F88;border-bottom:4px solid #15324D;color:#EA921F;} */
+	.priceminister #options li:hover, .priceminister #options li.actif{background-color:#fff;border-bottom:4px solid #15324D;color:#EA921F;}
+	.priceminister #optionContent h2{color:#0E1F88;}
+
+	/* RAKUTEN */
+	.rakuten #top h1{color:#BF0000;}
+	.rakuten #top h1 span{color:#000;}
+		.rakuten #top h1 span#nomPartenaire strong{color:#BF0000;}
+		.rakuten #top h1 span#nomPartenaire strong.color2{color:#BF0000;}
+	.rakuten #calcMenu li.actif a{color:#BF0000;}
+	.rakuten #step li span.color{color:#BF0000;}
+	.rakuten span.bullet{background-color:#BF0000;}
+	.rakuten .steps li span.bullet {background-color: #BF0000;}
+	.rakuten #recap table td:first-child,.rakuten .steps h2 {color: #BF0000;}
+	/*.rakuten .btn01{background-color:#BF0000;border-bottom:3px solid #002340;}
+	.rakuten .input01{border:2px solid #BF0000;}*/
+	.rakuten .btn01{background-color:#A10000;border-bottom:3px solid #BF0000;}
+	.rakuten .btn01:hover{background-color:#BF0000;border-bottom:3px solid #BF0000;}
+	.rakuten .input01{border:none;border-bottom:1px solid #BF0000;}
+	/* .rakuten #options li:hover, .rakuten #options li.actif{background-color:#BF0000;border-bottom:4px solid #15324D;color:#BF0000;} */
+	.rakuten #options li:hover, .rakuten #options li.actif{background-color:#fff;border-bottom:4px solid #15324D;color:#BF0000;}
+	.rakuten #optionContent h2{color:#BF0000;}
+
+	/* 3suisses */
+	.suisses #top h1{color:#000;}
+	.suisses #top h1 span{color:#000;}
+	.suisses #calcMenu li.actif a{color:#000;}
+	.suisses #step li span.color{color:#000;}
+	.suisses span.bullet{background-color:#000;}
+	.suisses .steps li span.bullet {background-color: #000;}
+	.suisses #recap table td:first-child,.suisses .steps h2 {color: #000;}
+	/*.suisses .btn01{background-color:#000;border-bottom:3px solid #333;}
+	.suisses .input01{border:2px solid #333;}*/
+	.suisses .btn01{background-color:#000;border-bottom:3px solid #dd1e25;}
+	.suisses .input01{border:none;border-bottom:1px solid #000;}
+	.suisses #options li:hover, .3suisses #options li.actif{background-color:#000;border-bottom:4px solid #333;}
+	.suisses #optionContent h2{color:#000;}
+	
+	
+/** Responsive **/
+@media (max-width: 759px){
+	#options.grid3 > *, #options.grid4 > *, #options.grid5 > *, #options.grid6 > *, #options.grid7 > *, #options.grid8 > *{width:33.33%;}
+	#options.grid3 li:last-child, #options.grid5 li:last-child, #options.grid7 li:last-child{width:100%;}
+	#calculatrice{width:100%;}
+	#calcMenu li{font-size:1.3rem;}
+	.btn01{float:none;}
+	#step > li{font-size: 1.4rem;}
+	#step > li > p{margin: 0 5px 15px 0px;}
+	#banniere img{width:100%;}
+	#mention {padding: 0 20px;}
+	
+	/* Fonctionnement et Avantages */
+	.calcContent h2{font-size: 1.8rem;}
+	.etape li{overflow:inherit;padding-left: 12px;}
+	.etape li span.bullet{top: 5px;left: -14px;}
+	.etape li p{text-align: center;margin-top: 20px;}
+	.etape li img, .etape li span{float:none;}
+	.etape li span.texte{width:100%;}
+}
+
+@media (max-width: 510px){
+	#options.grid3 > *, #options.grid4 > *, #options.grid5 > *, #options.grid6 > *, #options.grid7 > *, #options.grid8 > *{width:50%;}
+	.choixMontant{width: 100%;text-align: center;}
+}

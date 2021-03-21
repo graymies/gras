@@ -1,0 +1,86 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Calculatrice 4xCB mda</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="author" content="Cofidis">
+    <meta name="description" content="calculatrice 1euro.com">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+
+    <link href="css/calculatrice_1.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body>
+    <div id="calculatrice">
+        <div id="top">
+            <img src="images/logo-Cofidis-Pay_4xcb.png" id="logo4cb" alt="4 x CB - logo" width="148px">
+            <img src="images/logo-partenaire_1.jpeg" id="logoPartenaire" alt>
+            <h1 class="titleStyle">Payez vos achats <span id="nomPartenaire"></span><br><span> en 4 fois par carte bancaire</span></h1>
+        </div>
+
+        <div id="tabCalc" class="radiusb">
+            <div id="recap" class="calcContent">
+                <p class="choixMontant">
+                    <input id="montant" type="text" class="input01" value="0"> <strong>€</strong><a href="#" id="btCalcul" title="Calculer" class="btn01">Calculer</a>
+                </p>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>Pour cet achat de&nbsp;:</td>
+                            <td><span class="montant"></span>&nbsp;&euro;</td>
+                        </tr>
+                        <tr>
+                            <td><span class="nbMensualites"></span> &eacute;ch&eacute;ances de&nbsp;:</td>
+                            <td><span class="mens-n"></span>&nbsp;&euro;</td>
+                        </tr>
+                        <tr>
+                            <td>Montant total d&ucirc;&nbsp;:</td>
+                            <td><span class="montant-total-du"></span>&nbsp;&euro;</td>
+                        </tr>
+                        <tr>
+                            <td>Frais (<span class="frais-taux"></span>% du montant total de la commande)&nbsp;:</td>
+                            <td><span class="frais"></span>&nbsp;&euro;</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div id="optionContent">
+                    <p></p>
+                </div>
+
+            </div>
+
+            <div class="calcContent steps">
+                <h2>Au moment du paiement <br>c'est tr&egrave;s simple&nbsp;!</h2>
+                <ul id="step">
+                    <li class="step1">
+                        <span class="bullet">1</span>
+                        <p>Je choisis le 4&nbsp;x&nbsp;CB</p>
+                    </li>
+                    <li class="step2 clear">
+                        <span class="bullet">2</span>
+                        <p>Je renseigne ma carte bancaire</p>
+                    </li>
+                    <li class="step3 clear">
+                        <span class="bullet">3</span>
+                        <p>J'ai une r&eacute;ponse imm&eacute;diate&nbsp;!</p>
+                    </li>
+                </ul>
+            </div>
+            <div id="mention">
+                <p class="mention1"></p>
+                <p class="mention2"></p>
+            </div>
+        </div>
+        <div id="banniere"></div>
+    </div>
+
+    <script type="text/javascript" src="js/jquery-1.11.2.min_1.js"></script>
+    <script type="text/javascript" src="js/calculatrice_1.js"></script>
+
+</body>
+
+</html>
